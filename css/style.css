@@ -1,0 +1,173 @@
+/* Reset e estilo padrão */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#toggleDarkMode {
+  width: 130px; /* Ajusta a largura automaticamente ao conteúdo */
+  padding: 10px 20px; /* Ajusta o padding para garantir um tamanho adequado */
+  font-size: 14px; /* Ajusta o tamanho da fonte, se necessário */
+  text-align: center; /* Centraliza o texto do botão */
+  margin: 10px auto;
+}
+
+body {
+  background: linear-gradient(135deg, #fbe9e7, #ffcc80);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garante que o footer fique no final */
+  min-height: 100vh; /* Garante que o corpo ocupe toda a altura da página */
+  padding: 20px;
+  margin: 0;
+}
+
+/* Header com o Logo centralizado */
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.header .logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container principal */
+.container {
+  display: flex; /* Flexbox para alinhar as seções lado a lado */
+  gap: 20px; /* Espaço entre as seções */
+  flex-wrap: wrap; /* Permite que as seções se ajustem em telas menores */
+  width: 100%;
+  max-width: 1080px;
+  padding: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 48%; /* Garante que ambas as seções ocupem metade da largura */
+}
+
+/* Para telas menores, as seções devem se empilhar uma em cima da outra */
+@media (max-width: 768px) {
+  .section {
+    flex: 1 1 100%; /* Se empilham no layout mobile */
+  }
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff9800;
+}
+
+.textarea {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff9800;
+}
+.box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #fb8c00;
+}
+
+/* Estilo para a tabela de resultados */
+#resultados {
+  list-style-type: none;
+  padding: 10px;
+  background-color: #ffeb3b;
+  border-radius: 8px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+#resultados li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-weight: bold;
+  color: #000; /* Cor preta */
+  margin-top: auto; /* Faz com que o footer fique sempre no final */
+}
+
+footer span {
+  color: #000; /* Garante que o texto seja preto */
+}
+
+/* Adiciona um efeito de transição para o modo escuro */
+button, select, input, textarea {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .container {
+  background-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .section {
+  background-color: #555;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode button {
+  background-color: #ff7043;
+}
+
+body.dark-mode button:hover {
+  background-color: #ff5722;
+}
+
+body.dark-mode input, body.dark-mode select {
+  background-color: #666;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+body.dark-mode footer {
+  color: #ff5722;
+}
