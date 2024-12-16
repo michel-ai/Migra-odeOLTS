@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Provisionamento das ONUs</title>
+</head>
+
+<body>
+    <!-- Header com o Logo centralizado -->
+    <div class="header">
+        <img src="#" alt="Logo da Empresa" class="logo">
+    </div>
+
+    <form id="ordemServico">
+
+        <!-- Dashboard -->
+        <button id="toggleDarkMode" class="button">Modo Escuro</button>
+        <div class="container">
+
+            <div class="section section1">
+
+
+
+                <!-- Número da Placa -->
+                <label for="placa" class="label">Nº da Placa:</label>
+                <input type="text" id="placa" class="box" name="nOnu" placeholder="Informe o Nº da placa x/x" required>
+                <br>
+
+                <!-- Ramo -->
+                <label for="ramo" class="label">Ramo:</label>
+                <input type="text" id="ramo" class="box" name="ramo" placeholder="Informe o Ramo da PON:" required>
+                <br>
+
+                <!-- VLAN ID -->
+                <label for="vlan" id="lvlan" class="label">VLAN ID:</label>
+                <input type="text" id="vlan" class="box" name="vlan" placeholder="0000" maxlength="4" required>
+                <br>
+
+                <!-- Área do Json -->
+                <label for="json" id="lvlan" class="label">COLE O JSON AQUI:</label>
+                <textarea type="text" id="json" class="box" name="json" placeholder="COLE O JSON AQUI:"
+                    required></textarea>
+
+                <br>
+            </div>
+            <!-- Resultados -->
+            <div class="section section2">
+                <label class="label">Resultados:</label><br>
+                <span>=================================</span>
+                <ul id="resultados"></ul>
+                <span>=================================</span>
+                <br>
+                <!-- Botões -->
+                <button type="submit" class="button" id="btn-enviar">
+                    <b>Enviar</b>
+                </button>
+                <button type="button" class="button" id="btn-copiar">
+                    <b>Copiar os Dados</b>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+    <footer>
+        <span><b>Desenvolvido por Carlos Mozart</b></span>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
